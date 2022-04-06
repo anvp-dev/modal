@@ -224,6 +224,14 @@ button {
   margin-right: 10px;
 }
 
+/* Исправляет прыгающий скролл */
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 575.98px) {
   .modal__body {
     padding: 40px 20px;
