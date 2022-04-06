@@ -1,0 +1,136 @@
+.modal {
+  display: none;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__overlay.overlay-blur {
+  backdrop-filter: blur(3px);
+}
+
+.modal__body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 40px 40px 40px 40px;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.modal__content {
+  background-color: inherit;
+}
+
+.modal__title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.modal__text {
+  font-size: 16px;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  overflow: hidden;
+}
+
+.modal__button-close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: translate(10px, -20px) rotate(-45deg);
+  animation-name: btn-close-before;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.modal__button-close::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: translate(-32px, -20px) rotate(45deg);
+  animation-name: btn-close-after;
+  animation-duration: 0.2s;
+  animation-timing-function: ease; 
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.screen-overflow {
+  overflow: hidden;
+}
+
+.modal.is-active {
+  display: block;
+}
+
+
+@keyframes btn-close-before {
+  0% {   
+    transform: translate(10px, -20px) rotate(-45deg);
+  }
+
+  100% {   
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes btn-close-after {
+  0% {   
+    transform: translate(-26px, -18px) rotate(45deg);
+  }
+
+  100% {   
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+@keyframes modal-show {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+
+  100% {
+      transform: translate(-50%, -50%);
+  }
+}
+
+.modal-btn {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  background-color: rgb(243, 247, 207);
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .modal__body {
+    padding: 40px 20px;
+    height: 100%;
+    transform: translate(0, -50%); 
+    animation-name: modal-show;
+  }
+}

@@ -1,84 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!--  Кнопка  -->
+<button class="modal-btn modal-btn-1" type="button">Modal Button 1</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Модальное окно</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="buttons">
-            <button class="modal-btn modal-btn-1" type="button">Modal Button 1</button>
-            <button class="modal-btn modal-btn-2" type="button">Modal Button 2</button>
-        </div>
-        <article>
-            <div class="img">
-                <img src="./img/woman.jpg" alt="">
-            </div>
-            <p class="text">
-                Мы любим их пушистые мордочки за своенравие, независимость и миллион забавных выражений, благодаря
-                которым
-                на телефонах хозяев котов хранятся десятки гигабайтов фотографий и видео. Кажется, древнее поклонение
-                этим
-                животным в современном мире приобрело очень неожиданные формы. Собрали 10 интересных фактов о котиках,
-                которые, возможно, помогут узнать и понять их чуть больше.
+<!--  Модальное окно  -->
+<div class="modal modal-1">
+    <div class="modal__overlay overlay-blur"></div>
+    <div class="modal__body">
+        <div class="modal__content">
+            <h2 class="modal__title">
+                Модальное окно 1
+            </h2>                
+            <p class="modal__text">
+                Lorem ipsum dolor sit amet.
             </p>
-            
-            <br>
-        
-            <div>Открыть Модальное окно - 1</div>
-            <button class="modal-btn modal-btn-3" type="button">Modal Button 3</button>
-            <div class="img">
-                <img src="./img/cat.jpg" alt="">
-            </div>
-        </article>
-    </div>
-    <div class="modal modal-1">
-        <div class="modal__overlay overlay-blur"></div>
-        <div class="modal__body">
-            <div class="modal__content">
-                <h2 class="modal__title">
-                    Модальное окно 1
-                </h2>
-                <hr>
-                <p class="modal__text">
-                    Вероятно, вам все же не удастся обучить кота французскому, однако, если говорить о кошачьей
-                    коммуникации, известно, что эти животные способны издавать около 100 различных звуков. Кстати,
-                    большинство из них они используют исключительно в общении с людьми. Для сравнения: собаки способны
-                    издавать около 10 различных звуков.
-                </p>
-            </div>
-            <button class="modal__button-close" type="button" aria-label="close modal"></button>
         </div>
+        <button class="modal__button-close" type="button" aria-label="close modal"></button>
     </div>
-
-    <div class="modal modal-2">
-        <div class="modal__overlay overlay-blur"></div>
-        <div class="modal__body">
-            <div class="modal__content">
-                <h2 class="modal__title">
-                    Модальное окно 2
-                </h2>
-                <hr>
-                <p class="modal__text">
-                    В отличие от собак, которые просто обожают сладости (давать им сладкое категорически нельзя!), коты
-                    равнодушны к сахару. Ученые предполагают, что это связано с мутацией в одном из ключевых вкусовых
-                    рецепторов. Готовы поспорить, многие люди многое отдали бы за такую суперсилу — возможность без
-                    труда противостоять тортикам и конфетам.
-                </p>
-            </div>
-            <button class="modal__button-close" type="button" aria-label="close modal"></button>
-        </div>
-    </div>
-</body>
-<script src="./js/modal.js"></script>
-
-</html>
+</div>
